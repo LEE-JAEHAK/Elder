@@ -14,7 +14,7 @@ import com.makeus.elder.src.BaseActivity;
 import static com.makeus.elder.src.ApplicationClass.X_ACCESS_TOKEN;
 import static com.makeus.elder.src.ApplicationClass.sSharedPreferences;
 
-public class LoginActivity extends BaseActivity implements LoginActivityView {
+public class LoginActivity extends BaseActivity{
 
     Button button;
     @Override
@@ -29,31 +29,6 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
             }
         });
 
-    }
-
-    public void loginStart(String at) {
-        System.out.println("login start = " + at);
-        LoginService loginService = new LoginService(this);
-        RequestUser requestUser = new RequestUser();
-        requestUser.setAccess_token(at);
-        loginService.postUser(requestUser);
-    }
-
-    @Override
-    public void validateUserSuccess(String jwt, boolean isSuccess, int code, String message) {
-        System.out.println("JWT = " + jwt);
-        if (isSuccess) {
-            showCustomToast(message);
-            SharedPreferences.Editor editor = sSharedPreferences.edit();
-            editor.putString(X_ACCESS_TOKEN, jwt);
-            editor.commit();
-            next();
-        } else showCustomToast(message);
-    }
-
-    @Override
-    public void validateUserFail(String msg) {
-        showCustomToast(msg);
     }
 
     void next() {

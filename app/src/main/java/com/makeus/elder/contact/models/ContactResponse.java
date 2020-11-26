@@ -1,10 +1,8 @@
-package com.makeus.elder.login.models;
+package com.makeus.elder.contact.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class LoginResponse {
-    @SerializedName("insertId")
-    int insertId;
+public class ContactResponse {
 
     @SerializedName("isSuccess")
     boolean isSuccess;
@@ -14,10 +12,6 @@ public class LoginResponse {
 
     @SerializedName("message")
     String message;
-
-    public int getInsertId() {
-        return insertId;
-    }
 
 
     public boolean getIsSuccess() {

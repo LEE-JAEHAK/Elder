@@ -21,7 +21,6 @@ public class LoginService {
     }
 
     void postUser(RequestUser requestUser) {
-        System.out.println("postuser access token : " + requestUser.access_token);
         final LoginRetrofitInterface loginRetrofitInterface = getRetrofit().create(LoginRetrofitInterface.class);
         loginRetrofitInterface.postUser(requestUser).enqueue(new Callback<LoginResponse>() {
             @Override
@@ -31,8 +30,7 @@ public class LoginService {
                     loginActivityView.validateUserFail(response.message());
                     return;
                 }
-                System.out.println("loginservice : " + loginResponse.getJwt());
-                loginActivityView.validateUserSuccess(loginResponse.getJwt(), loginResponse.getIsSuccess(), loginResponse.getCode(), loginResponse.getMessage());
+                loginActivityView.validateUserSuccess(loginResponse.getInsertId(), loginResponse.getIsSuccess(), loginResponse.getCode(), loginResponse.getMessage());
             }
 
             @Override
