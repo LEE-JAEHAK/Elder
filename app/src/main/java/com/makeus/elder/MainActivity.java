@@ -8,13 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.makeus.elder.call.Schedule;
+import com.makeus.elder.chat.ChatActivity;
 import com.makeus.elder.contact.Call;
 
 import static com.makeus.elder.src.ApplicationClass.sSharedPreferences;
 
 public class MainActivity extends AppCompatActivity {
-    ConstraintLayout constraintLayout;
-    ConstraintLayout constraintLayout2;
+    ConstraintLayout constraintLayout,constraintLayout2,constraintLayout3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,11 +27,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         constraintLayout2 = findViewById(R.id.main_constraint_call);
-        System.out.println(sSharedPreferences.getInt("idx",0));
         constraintLayout2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 next2();
+            }
+        });
+        constraintLayout3 = findViewById(R.id.main_constraint_communication);
+        constraintLayout3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                next3();
             }
         });
     }
@@ -41,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
     }
     void next2() {
         Intent intent = new Intent(this, Call.class);
+        startActivity(intent);
+    }
+    void next3() {
+        Intent intent = new Intent(this, ChatActivity.class);
         startActivity(intent);
     }
 }
