@@ -6,4 +6,5 @@
 <p align="left">
 어르신과 돌보미에 따라 화면이 나뉩니다
 </p>
-![image](https://user-images.githubusercontent.com/60100786/109617476-c74e7880-7b79-11eb-98bc-17e633d60764.png)      ![image](https://user-images.githubusercontent.com/60100786/109617297-8eae9f00-7b79-11eb-9cfc-082e8a769311.png)
+![image](https://user-images.githubusercontent.com/60100786/109617476-c74e7880-7b79-11eb-98bc-17e633d60764.png)      
+![image](https://user-images.githubusercontent.com/60100786/109617297-8eae9f00-7b79-11eb-9cfc-082e8a769311.png)
