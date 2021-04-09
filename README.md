@@ -26,4 +26,3 @@
 
 
 
-![image](https://user-images.githubusercontent.com/60100786/114194858-def3fa80-998a-11eb-884a-b524ee515749.png)
